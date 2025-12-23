@@ -5,36 +5,63 @@
 #   Exit the program gracefully when the user chooses to.
 
 # print("********** Welcome to Expense Tracker Software **********")
-# dates=[]
-# categories=[]
-# descriptions=[]
-# amounts=[]
 
-# def details(date,category,description,amount):
-#     date = input("Enter the date of your payment in the format(dd/mm/yyyy) : ")
+# dates = []
+# categories = []
+# descriptions = []
+# amounts = []
+
+# def add_expense():
+#     date = input("Enter date (dd/mm/yyyy): ")
+#     category = input("Enter category: ")
+#     description = input("Enter description: ")
+#     amount = float(input("Enter amount: "))
+
 #     dates.append(date)
-#     category = input("Enter the category of your payment, why the payment was done : ")
 #     categories.append(category)
-#     description = input("Enter where the payment was done : ")
 #     descriptions.append(description)
-#     amount = int(input("Enter the amount of the payment : "))
 #     amounts.append(amount)
 
-# def total_payments(price,i):
-#     price = amounts[i]
+#     print("Expense added successfully!\n")
+
+# def view_expenses():
+#     if len(amounts) == 0:
+#         print("No expenses recorded yet.\n")
+#         return
+
+#     print("\nDate\t\tCategory\tDescription\tAmount")
+#     print("-" * 50)
 #     for i in range(len(amounts)):
-#         price += amounts[i]
-#     print("The total spendings so far is : ")
+#         print(f"{dates[i]}\t{categories[i]}\t{descriptions[i]}\t{amounts[i]}")
+#     print()
+
+# def total_spending():
+#     total = sum(amounts)
+#     print(f"Total spending so far: {total}\n")
 
 # def main():
-#     details(date,category,description,amount)
-#     choice = input("Do you want to continue entering the payment (Y/N) : ")
-#     if choice == "Y":
-#         main()
-#     else:
-#         total_payments()
+#     while True:
+#         print("1. Add Expense")
+#         print("2. View Expenses")
+#         print("3. Total Spending")
+#         print("4. Exit")
+
+#         choice = input("Enter your choice (1-4): ")
+
+#         if choice == "1":
+#             add_expense()
+#         elif choice == "2":
+#             view_expenses()
+#         elif choice == "3":
+#             total_spending()
+#         elif choice == "4":
+#             print("Thank you for using Expense Tracker. Goodbye!")
+#             break
+#         else:
+#             print("Invalid choice. Please try again.\n")
 
 # main()
+
 
 print("********** Welcome to Expense Tracker Software **********")
 dates=[]
